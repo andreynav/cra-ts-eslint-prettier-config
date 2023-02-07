@@ -120,3 +120,19 @@ And answer the next questions:
 ## Project structure
 
 The project structure should look like this:
+
+```
+.
+├── public
+├── src
+├── .env
+├── .eslintignore
+├── .eslintrc.json
+├── .gitignore
+├── .gitignore
+├── .prettierignore
+├── .prettierrc
+├── package.json
+├── README.md
+└── tsconfig.json
+```
