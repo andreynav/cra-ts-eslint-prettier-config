@@ -1,0 +1,1 @@
+# cra-ts-eslint-prettier-config
