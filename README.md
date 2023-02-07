@@ -136,3 +136,10 @@ The project structure should look like this:
 ├── README.md
 └── tsconfig.json
 ```
+## Running project
+
+To run project, open the root directory and enter the following command:
+
+```console
+  yarn start
+```
