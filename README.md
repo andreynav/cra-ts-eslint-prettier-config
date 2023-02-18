@@ -6,7 +6,7 @@ Recommend to use **Yarn** as a package manager.
 
 ## Installation
 
-1. To install [Create React App](https://create-react-app.dev/docs/getting-started#yarn) select a start directory for a new project and enter the following command:
+1. To install [Create React App](https://create-react-app.dev/docs/getting-started#yarn) select a start directory for a new project (folder with all projects) and enter the following command:
 
 ```console
   yarn create react-app your-app-name --template typescript
@@ -143,3 +143,22 @@ To run project, open the root directory and enter the following command:
 ```console
   yarn start
 ```
+
+It's expected that there will be errors after run the project. Add the next row to your `package.json` file to the section `scripts`:
+
+```console
+   "fix:codestyle": "find src/ -type f \\( -name \"*.ts\" -o -name \"*.tsx\" -o -name \"*.js\" -o -name \"*.jsx\" \\) -not -name \"*.d.ts\" | xargs prettier --write --plugin=./node_modules/@trivago/prettier-plugin-sort-imports/",
+```
+
+Run it by command:
+
+```console
+    yarn fix:codestyle
+```
+
+The command will fix some issues automatically. Also, you have to fix some issues by manual (for example, delete redundant `import react from 'react'`)
+
+
+## License
+
+The project is open source software provided under the [Apache License 2.0](LICENSE.md).
